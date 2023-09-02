@@ -1,1 +1,1 @@
-<img src="gambar.jpg" width="100%">
+<img src="{{ asset('gambar.jpg') }}" witdh="100%">

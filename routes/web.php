@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\PlaceController;
+use App\Http\Controllers\CoordinateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +18,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [PlaceController::class, 'index'])->name('places.index');
+Route::get('/', [CoordinateController::class, 'index'])->name('places.index');
+Route::get('/find', [CoordinateController::class, 'find'])->name('find');
+Route::post('/updateCoordinates', [CoordinateController::class, 'updateCoordinates'])->name('updateCoordinates');
+Route::post('/addCoordinate', [CoordinateController::class, 'addCoordinate'])->name('addCoordinate');
+Route::get('/ajax', [CoordinateController::class, 'ajax'])->name('ajax');
